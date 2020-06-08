@@ -57,7 +57,8 @@
   <build_export_depend>roscpp</build_export_depend>
   <build_export_depend>rospy</build_export_depend>
   <build_export_depend>std_msgs</build_export_depend>
-  <exec_depend>robotont_description</exec_depend>
+  <exec_depend>robotont_description</exec_depend>'
+  <exec_depend>robotont_nuc_description</exec_depend>
   <exec_depend>robotont_driver</exec_depend>
   <exec_depend>robotont_msgs</exec_depend>
   <exec_depend>robotont_support</exec_depend>
