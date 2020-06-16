@@ -69,8 +69,7 @@ def callback(data):
 			last_heartbeat = rospy.get_time()
 			cmd_vel_pub.publish(twist_msg)
 
-# Publish zero cmd_vel when no AR info has been r
-..eceived within given period
+# Publish zero cmd_vel when no AR info has been received within given period
 def timer_callback(event):
 	global last_heartbeat
 	if (rospy.get_time() - last_heartbeat) >= 0.5:

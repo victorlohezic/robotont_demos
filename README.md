@@ -13,6 +13,7 @@ This repository is a ROS package that contains various demos showing the capabil
 ```export ROS_MASTER_URI=http://robotont_IP_address:11311```
 * Set ROS_HOSTNAME: <br/>
 ```export ROS_HOSTNAME=robotont_IP_address```
+
 ### 3. Configure the pc's side of the network:
 * Open a new terminal window on your pc
 * Set ROS_MASTER_URI: <br/>
@@ -21,19 +22,30 @@ This repository is a ROS package that contains various demos showing the capabil
 ```export ROS_HOSTNAME=your_pc_IP_address```
 
 ## 3D mapping
-### 1. Set up a connection between your pc and robotont
+### 1. Set up a connection between your pc and Robotont
 ### 2. Install ROS wrapper of RTAB-Map:<br/>
 ```sudo apt-get install ros-melodic-rtabmap-ros```
-### 3. Launch 3d_mapping.launch on the robotont's terminal:<br/>
+### 3. Launch 3d_mapping.launch on the Robotont's terminal:<br/>
 ```roslaunch robotont_demos 3d_mapping.launch```
 ### 4.To visualize the result launch display_3d_mapping.launch on the pc's terminal:<br/>
 ```roslaunch robotont_demos display_3d_mapping.launch```
 
+## 2D mapping
+### 1. Set up a connection between your pc and Robotont
+### 2. Install necessary packages:<br/>
+```sudo apt-get install ros-melodic-depthimage-to-laserscan```<br/>
+```sudo apt-get install ros-melodic-cartographer-ros```<br/>
+```sudo apt-get install ros-melodic-move-base```
+### 3. Launch 2d_nav_carto.launch on the Robotont's terminal:<br/>
+```roslaunch robotont_demos 2d_nav_carto.launch```
+### 4.To visualize the result launch display_2d_mapping.launch on the pc's terminal:<br/>
+```roslaunch robotont_demos display_2d_mapping.launch```
+
 ## AR tracking
-### 1. Set up a connection between your pc and robotont
+### 1. Set up a connection between your pc and Robotont
 ### 2. Install ROS wrapper for alvar:<br/>
 ```sudo apt-get install ros-melodic-ar-track-alvar```
-### 3. Launch ar_follow_the_leader.launch on the robotont's terminal:<br/>
+### 3. Launch ar_follow_the_leader.launch on the Robotont's terminal:<br/>
 ```roslaunch robotont_demos ar_follow_the_leader.launch```
 ### 4. To visualize the marker and the robot launch display_ar_marker.launch on the pc's terminal:<br/>
 ```roslaunch robotont_demos display_ar_marker.launch```
