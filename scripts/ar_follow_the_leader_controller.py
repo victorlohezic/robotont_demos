@@ -52,12 +52,12 @@ def callback(data):
 
 		twist_msg = Twist()
 		angle = atan2(marker_pos[1],marker_pos[0])
-		rospy.loginfo("ANGLE: %s", angle)
-		rospy.loginfo("DISTTOMARKER: %s", dist_to_marker)
-		rospy.loginfo("GoalDir: %s", goal_dir)
-		rospy.loginfo("DISTTOGOAL: %s", dist_to_goal)
-		rospy.loginfo("\nPOS: %s", marker_pos)
-		rospy.loginfo("\nGOAL: %s", goal_pos)
+		rospy.logdebug("ANGLE: %s", angle)
+		rospy.logdebug("DISTTOMARKER: %s", dist_to_marker)
+		rospy.logdebug("GoalDir: %s", goal_dir)
+		rospy.logdebug("DISTTOGOAL: %s", dist_to_goal)
+		rospy.logdebug("\nPOS: %s", marker_pos)
+		rospy.logdebug("\nGOAL: %s", goal_pos)
 
                 twist_msg.linear.x = min(max(goal_pos[0],-MAX_LIN_VEL),MAX_LIN_VEL)
                 twist_msg.linear.y = min(max(goal_pos[1],-MAX_LIN_VEL),MAX_LIN_VEL)
@@ -69,7 +69,8 @@ def callback(data):
 			last_heartbeat = rospy.get_time()
 			cmd_vel_pub.publish(twist_msg)
 
-# Publish zero cmd_vel when no AR info has been received within given period
+# Publish zero cmd_vel when no AR info has been r
+..eceived within given period
 def timer_callback(event):
 	global last_heartbeat
 	if (rospy.get_time() - last_heartbeat) >= 0.5:

@@ -2,8 +2,8 @@
 This repository is a ROS package that contains various demos showing the capabilities of the Robotont platform
 
 ## Setting up the connection between the robot and your pc
-### 1. Connect your pc to the robotont's hotspot or the same network the robotont is connected to.
-### 2. Configure robotont's side of the network:
+### 1. Connect your pc to Robotont's hotspot or the same network Robotont is connected to.
+### 2. Configure Robotont's side of the network:
 * Open a new terminal window on your pc
 * Estabish an SSH connection to the robot:<br/>
 ```ssh username@robotont_IP_address```
