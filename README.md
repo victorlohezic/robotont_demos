@@ -37,12 +37,3 @@ This repository is a ROS package that contains various demos showing the capabil
 ```roslaunch robotont_demos ar_follow_the_leader.launch```
 ### 4. To visualize the marker and the robot launch display_ar_marker.launch on the pc's terminal:<br/>
 ```roslaunch robotont_demos display_ar_marker.launch```
-
-### Laserscan
-### 1. Set up a connection between your pc and robotont
-### 2. Clone depth_nav_tools repository to your catkin workspace:<br/>
-```https://github.com/mdrwiega/depth_nav_tools.git```
-### 3. Launch teleop_with_laserscan.launch on the robotont's terminal:<br/>
-```roslaunch robotont_demos display_ar_marker.launch```
-### 4. To see the messages published by the robot:<br/>
-```rostopic echo /scan_to_distance```
