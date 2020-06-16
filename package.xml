@@ -11,6 +11,8 @@
   <url type="website">http://robotont.ut.ee</url>
   <url type="repository">http://github.com/robotont/robotont_demos</url>
 
+  <license>Apache 2.0</license>
+
   <buildtool_depend>catkin</buildtool_depend>
 
   <build_depend>robotont_msgs</build_depend>
