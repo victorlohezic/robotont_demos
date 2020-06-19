@@ -1,51 +1,57 @@
 # robotont_demos
 This repository is a ROS package that contains various demos showing the capabilities of the Robotont platform
 
-## Setting up the connection between the robot and your pc
-### 1. Connect your pc to Robotont's hotspot or the same network Robotont is connected to.
-### 2. Configure Robotont's side of the network:
-* Open a new terminal window on your pc
-* Estabish an SSH connection to the robot:<br/>
-```ssh username@robotont_IP_address```
-* If the computer asks a "yes/no" question, type "yes"
-* Enter the password: t0ndik00bas
-* Set ROS_MASTER_URI: <br/>
-```export ROS_MASTER_URI=http://robotont_IP_address:11311```
-* Set ROS_HOSTNAME: <br/>
-```export ROS_HOSTNAME=robotont_IP_address```
 
-### 3. Configure the pc's side of the network:
-* Open a new terminal window on your pc
-* Set ROS_MASTER_URI: <br/>
-```export ROS_MASTER_URI=http://robotont_IP_address:11311```
-* Set ROS_HOSTNAME: <br/>
-```export ROS_HOSTNAME=your_pc_IP_address```
+## Before you begin
+To run the demos it is necessary to have a ROBOTONT robot and a user PC with Ubuntu Linux and ROS Melodic installed.
 
 ## 3D mapping
-### 1. Set up a connection between your pc and Robotont
-### 2. Install ROS wrapper of RTAB-Map:<br/>
-```sudo apt-get install ros-melodic-rtabmap-ros```
-### 3. Launch 3d_mapping.launch on the Robotont's terminal:<br/>
+**Setup**<br/>
+
+*You only need to run these commands if this is the first time you you run this demo with the current user PC or ROBOTONT on-board computer.*
+
+On ROBOTONT on-board computer, install ROS wrapper of RTAB-Map<br/>
+```sudo apt update```
+```sudo apt install ros-melodic-rtabmap-ros```
+
+**Launching the demo**<br/>
+
+On ROBOTONT on-board computer, launch 3d_mapping.launch<br/>
 ```roslaunch robotont_demos 3d_mapping.launch```
-### 4.To visualize the result launch display_3d_mapping.launch on the pc's terminal:<br/>
+
+On user PC, launch display_3d_mapping.launch to visualize the result<br/>
 ```roslaunch robotont_demos display_3d_mapping.launch```
 
 ## 2D mapping
-### 1. Set up a connection between your pc and Robotont
-### 2. Install necessary packages:<br/>
-```sudo apt-get install ros-melodic-depthimage-to-laserscan```<br/>
-```sudo apt-get install ros-melodic-cartographer-ros```<br/>
-```sudo apt-get install ros-melodic-move-base```
-### 3. Launch 2d_nav_carto.launch on the Robotont's terminal:<br/>
+**Setup**<br/>
+
+*You only need to run these commands if this is the first time you you run this demo with the current user PC or ROBOTONT on-board computer.*
+
+On ROBOTONT on-board computer, install the following packages:<br/>
+```sudo apt install ros-melodic-depthimage-to-laserscan```<br/>
+```sudo apt install ros-melodic-cartographer-ros```<br/>
+```sudo apt install ros-melodic-move-base```
+
+**Launching the demo**<br/>
+
+On ROBOTONT on-board computer, launch 2d_nav_carto.launch<br/>
 ```roslaunch robotont_demos 2d_nav_carto.launch```
-### 4.To visualize the result launch display_2d_mapping.launch on the pc's terminal:<br/>
+
+On user PC, launch display_2d_mapping.launch to visualize the result<br/>
 ```roslaunch robotont_demos display_2d_mapping.launch```
 
 ## AR tracking
-### 1. Set up a connection between your pc and Robotont
-### 2. Install ROS wrapper for alvar:<br/>
-```sudo apt-get install ros-melodic-ar-track-alvar```
-### 3. Launch ar_follow_the_leader.launch on the Robotont's terminal:<br/>
+
+*You only need to run these commands if this is the first time you you run this demo with the current user PC or ROBOTONT on-board computer.*
+
+On ROBOTONT on-board computer, install ROS wrapper for alvar<br/>
+```sudo apt update```
+```sudo apt install ros-melodic-ar-track-alvar```
+
+**Launching the demo**<br/>
+
+On ROBOTONT on-board computer, launch ar_follow_the_leader.launch<br/>
 ```roslaunch robotont_demos ar_follow_the_leader.launch```
-### 4. To visualize the marker and the robot launch display_ar_marker.launch on the pc's terminal:<br/>
-```roslaunch robotont_demos display_ar_marker.launch```
+
+On user PC, launch display_ar_marker.launch to visualize the result<br/>
+```roslaunch robotont_demos display_ar_marker.launch marker_id:=tag_nr```
