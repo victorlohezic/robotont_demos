@@ -22,12 +22,12 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
-add_executable(robotont_teleop_joy src/robotont_teleop_joy.cpp) 
+add_executable(teleop_joy src/teleop_joy.cpp) 
 
-target_link_libraries(robotont_teleop_joy ${catkin_LIBRARIES})
+target_link_libraries(teleop_joy ${catkin_LIBRARIES})
 
 
-install(TARGETS robotont_teleop_joy
+install(TARGETS teleop_joy
   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
