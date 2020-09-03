@@ -1,6 +1,8 @@
-# robotont_demos
+# robotont\_demos
 This repository is a ROS package that contains various demos showing the capabilities of the Robotont platform
 
+[![Build Status](https://travis-ci.org/robotont/robotont_demos.svg?branch=melodic-devel)](https://travis-ci.org/robotont/robotont_demos)
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 ## Before you begin
 To run the demos it is necessary to have a ROBOTONT robot and a user PC with Ubuntu Linux and ROS Melodic installed.

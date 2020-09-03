@@ -7,7 +7,34 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   std_msgs
   sensor_msgs
+  joy
 )
 
-catkin_package()
+catkin_package(
+  CATKIN_DEPENDS
+    std_msgs
+    sensor_msgs
+    joy
+  )
 
+include_directories(
+  include
+  ${catkin_INCLUDE_DIRS}
+)
+
+add_executable(robotont_teleop_joy src/robotont_teleop_joy.cpp) 
+
+target_link_libraries(robotont_teleop_joy ${catkin_LIBRARIES})
+
+
+install(TARGETS robotont_teleop_joy
+  ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+  RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+  )
+
+install(DIRECTORY include/${PROJECT_NAME}/
+  DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
+  )
+
+install(DIRECTORY config launch scripts DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
