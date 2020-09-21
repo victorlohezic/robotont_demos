@@ -1,5 +1,5 @@
-#ifndef ROBOTONT_DRIVER_
-#define ROBOTONT_DRIVER_
+#ifndef ROBOTONT_TELEOP_JOY_H
+#define ROBOTONT_TELEOP_JOY_H
 
 #include <ros/ros.h>
 #include <sensor_msgs/Joy.h>

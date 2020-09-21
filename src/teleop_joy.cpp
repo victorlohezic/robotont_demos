@@ -37,7 +37,7 @@ namespace robotont
     twist.angular.z = joy->axes[3];
 
     vel_pub_.publish(twist);
-    ROS_INFO_STREAM(twist);
+    ROS_DEBUG_STREAM(twist);
   }
 
   void TeleopJoy::timerCallback(const ros::TimerEvent&)
