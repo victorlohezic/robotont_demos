@@ -65,7 +65,7 @@ Similarly to the hostname based setup, append the commands to `.bashrc` to set t
 
 *You only need to run these commands if this is the first time you you run this demo with the current user PC or ROBOTONT on-board computer.*
 
-On **Robotont on-board computer**, install ROS wrapper of RTAB-Map<br/>
+**On Robotont on-board computer**, install ROS wrapper of RTAB-Map<br/>
 ```sudo apt update```
 ```sudo apt install ros-melodic-rtabmap-ros```
 
