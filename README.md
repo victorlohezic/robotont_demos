@@ -87,18 +87,10 @@ Similarly to the hostname based setup, append the commands to `.bashrc` to set t
 ```sudo apt install ros-melodic-cartographer-ros```<br/>
 ```sudo apt install ros-melodic-move-base```
 
-**Launching the demo using Robotont**<br/>
+**Launching the demo**<br/>
 
 **On Robotont on-board computer**, launch 2d_slam.launch<br/>
 ```roslaunch robotont_demos 2d_slam.launch```
-
-**On PC**, launch 2d_slam_display.launch to visualize the result<br/>
-```roslaunch robotont_demos 2d_slam_display.launch```
-
-**Launching the demo using robotont_gazebo package**<br/>
-
-**On Robotont on-board computer**, launch 2d_slam.launch<br/>
-```roslaunch robotont_demos 2d_slam.launch image:=image_raw```
 
 **On PC**, launch 2d_slam_display.launch to visualize the result<br/>
 ```roslaunch robotont_demos 2d_slam_display.launch```
