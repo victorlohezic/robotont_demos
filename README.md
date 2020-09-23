@@ -74,8 +74,8 @@ Similarly to the hostname based setup, append the commands to `.bashrc` to set t
 **On Robotont on-board computer**, launch 3d_mapping.launch<br/>
 ```roslaunch robotont_demos 3d_mapping.launch```
 
-**On PC**, launch display_3d_mapping.launch to visualize the result<br/>
-```roslaunch robotont_demos display_3d_mapping.launch```
+**On PC**, launch 3d_mapping_display.launch to visualize the result<br/>
+```roslaunch robotont_demos 3d_mapping_display.launch```
 
 ## 2D mapping
 **Setup**<br/>
@@ -87,13 +87,21 @@ Similarly to the hostname based setup, append the commands to `.bashrc` to set t
 ```sudo apt install ros-melodic-cartographer-ros```<br/>
 ```sudo apt install ros-melodic-move-base```
 
-**Launching the demo**<br/>
+**Launching the demo using Robotont**<br/>
 
-**On Robotont on-board computer**, launch 2d_nav_carto.launch<br/>
-```roslaunch robotont_demos 2d_nav_carto.launch```
+**On Robotont on-board computer**, launch 2d_slam.launch<br/>
+```roslaunch robotont_demos 2d_slam.launch```
 
-**On PC**, launch display_2d_mapping.launch to visualize the result<br/>
-```roslaunch robotont_demos display_2d_mapping.launch```
+**On PC**, launch 2d_slam_display.launch to visualize the result<br/>
+```roslaunch robotont_demos 2d_slam_display.launch```
+
+**Launching the demo using robotont_gazebo package**<br/>
+
+**On Robotont on-board computer**, launch 2d_slam.launch<br/>
+```roslaunch robotont_demos 2d_slam.launch image:=image_raw```
+
+**On PC**, launch 2d_slam_display.launch to visualize the result<br/>
+```roslaunch robotont_demos 2d_slam_display.launch```
 
 ## AR tracking
 
@@ -108,5 +116,5 @@ Similarly to the hostname based setup, append the commands to `.bashrc` to set t
 **On Robotont on-board computer**, launch ar_follow_the_leader.launch (change 5 with the AR tag number you intend to follow)<br/>
 ```roslaunch robotont_demos ar_follow_the_leader.launch marker_id:=5```
 
-**On PC**, launch display_ar_marker.launch to visualize the result<br/>
-```roslaunch robotont_demos display_ar_marker.launch```
+**On PC**, launch ar_marker_display.launch to visualize the result<br/>
+```roslaunch robotont_demos ar_marker_display.launch```
