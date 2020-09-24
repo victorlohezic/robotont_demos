@@ -66,7 +66,7 @@ Similarly to the hostname based setup, append the commands to `.bashrc` to set t
 *You only need to run these commands if this is the first time you you run this demo with the current user PC or ROBOTONT on-board computer.*
 
 **On Robotont on-board computer**, install ROS wrapper of RTAB-Map<br/>
-```sudo apt update```
+```sudo apt update```<br/>
 ```sudo apt install ros-melodic-rtabmap-ros```
 
 **Launching the demo**<br/>
@@ -83,6 +83,7 @@ Similarly to the hostname based setup, append the commands to `.bashrc` to set t
 *You only need to run these commands if this is the first time you you run this demo with the current user PC or ROBOTONT on-board computer.*
 
 **On Robotont on-board computer**, install the following packages:<br/>
+```sudo apt update```<br/>
 ```sudo apt install ros-melodic-depthimage-to-laserscan```<br/>
 ```sudo apt install ros-melodic-cartographer-ros```<br/>
 ```sudo apt install ros-melodic-move-base```
@@ -100,7 +101,7 @@ Similarly to the hostname based setup, append the commands to `.bashrc` to set t
 *You only need to run these commands if this is the first time you you run this demo with the current user PC or ROBOTONT on-board computer.*
 
 **On Robotont on-board computer**, install ROS wrapper for alvar<br/>
-```sudo apt update```
+```sudo apt update```<br/>
 ```sudo apt install ros-melodic-ar-track-alvar```
 
 **Launching the demo**<br/>
