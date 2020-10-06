@@ -21,8 +21,8 @@ def doLED():
         led_msg.colors = []
         color = ColorRGB()
 
-        t=0.05
-        t1=0.05
+        t=0.1
+        t1=0.1
         c_max=200
         c_step=10
         led_step=1
