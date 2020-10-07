@@ -65,48 +65,70 @@ Similarly to the hostname based setup, append the commands to `.bashrc` to set t
 
 *You only need to run these commands if this is the first time you you run this demo with the current user PC or ROBOTONT on-board computer.*
 
-On ROBOTONT on-board computer, install ROS wrapper of RTAB-Map<br/>
-```sudo apt update```
-```sudo apt install ros-melodic-rtabmap-ros```
+**On Robotont on-board computer**, install ROS wrapper of RTAB-Map<br/>
+
+```bash
+sudo apt update
+sudo apt install ros-melodic-rtabmap-ros
+```
 
 **Launching the demo**<br/>
 
-On ROBOTONT on-board computer, launch 3d_mapping.launch<br/>
-```roslaunch robotont_demos 3d_mapping.launch```
+**On Robotont on-board computer**, launch 3d_mapping.launch<br/>
+```bash
+roslaunch robotont_demos 3d_mapping.launch
+```
 
-On user PC, launch display_3d_mapping.launch to visualize the result<br/>
-```roslaunch robotont_demos display_3d_mapping.launch```
+**On PC**, launch 3d_mapping_display.launch to visualize the result<br/>
+
+```bash
+roslaunch robotont_demos 3d_mapping_display.launch
+```
 
 ## 2D mapping
 **Setup**<br/>
 
 *You only need to run these commands if this is the first time you you run this demo with the current user PC or ROBOTONT on-board computer.*
 
-On ROBOTONT on-board computer, install the following packages:<br/>
-```sudo apt install ros-melodic-depthimage-to-laserscan```<br/>
-```sudo apt install ros-melodic-cartographer-ros```<br/>
-```sudo apt install ros-melodic-move-base```
+**On Robotont on-board computer**, install the following packages:<br/>
+
+```bash
+sudo apt update
+sudo apt install ros-melodic-depthimage-to-laserscan
+sudo apt install ros-melodic-cartographer-ros
+sudo apt install ros-melodic-move-base
+```
 
 **Launching the demo**<br/>
 
-On ROBOTONT on-board computer, launch 2d_nav_carto.launch<br/>
-```roslaunch robotont_demos 2d_nav_carto.launch```
+**On Robotont on-board computer**, launch 2d_slam.launch<br/>
+```bash
+roslaunch robotont_demos 2d_slam.launch
+```
 
-On user PC, launch display_2d_mapping.launch to visualize the result<br/>
-```roslaunch robotont_demos display_2d_mapping.launch```
+**On PC**, launch 2d_slam_display.launch to visualize the result<br/>
+```bash
+roslaunch robotont_demos 2d_slam_display.launch
+```
 
 ## AR tracking
 
 *You only need to run these commands if this is the first time you you run this demo with the current user PC or ROBOTONT on-board computer.*
 
-On ROBOTONT on-board computer, install ROS wrapper for alvar<br/>
-```sudo apt update```
-```sudo apt install ros-melodic-ar-track-alvar```
+**On Robotont on-board computer**, install ROS wrapper for alvar<br/>
+```bash
+sudo apt update
+sudo apt install ros-melodic-ar-track-alvar
+```
 
 **Launching the demo**<br/>
 
-On ROBOTONT on-board computer, launch ar_follow_the_leader.launch<br/>
-```roslaunch robotont_demos ar_follow_the_leader.launch```
+**On Robotont on-board computer**, launch ar_follow_the_leader.launch (change 5 with the AR tag number you intend to follow)<br/>
+```bash
+roslaunch robotont_demos ar_follow_the_leader.launch marker_id:=5
+```
 
-On user PC, launch display_ar_marker.launch to visualize the result<br/>
-```roslaunch robotont_demos display_ar_marker.launch marker_id:=tag_nr```
+**On PC**, launch ar_marker_display.launch to visualize the result<br/>
+```bash
+roslaunch robotont_demos ar_marker_display.launch
+```

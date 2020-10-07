@@ -29,7 +29,7 @@
   <build_export_depend>sensor_msgs</build_export_depend>
   <build_export_depend>joy</build_export_depend>
 
-  <exec_depend>robotont_description</exec_depend>'
+  <exec_depend>robotont_description</exec_depend>
   <exec_depend>robotont_nuc_description</exec_depend>
   <exec_depend>robotont_driver</exec_depend>
   <exec_depend>robotont_msgs</exec_depend>
