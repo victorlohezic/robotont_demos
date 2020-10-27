@@ -1,8 +1,9 @@
 <?xml version="1.0" ?>
 <launch>
 <!-- Launch gmapping-->
+    <arg name="robotont_ns" default="robotont"/>
     <node pkg="gmapping" type="slam_gmapping" name="slam_gmapping" output="screen" >
-        <param name="odom_frame" value="odom" />
+        <remap from="odom" to="$(arg robotont_ns)/odom"/>
         <param name="base_frame" value="base_footprint" />
         <param name="minimumScore" value="100" />
     </node>
