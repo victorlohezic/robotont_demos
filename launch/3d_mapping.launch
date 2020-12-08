@@ -9,9 +9,9 @@
             <param name="frame_id" type="string" value="base_footprint"/>
             <param name="subscribe_depth" type="bool" value="true"/>
             <!-- <remap from="odom" to="/$(arg robotont_ns)/odom"/> -->
-            <remap from="rgb/image" to="camera/color/image_raw"/>
-            <remap from="depth/image" to="camera/aligned_depth_to_color/image_raw"/>
-            <remap from="rgb/camera_info" to="camera/color/camera_info"/>
+            <remap from="rgb/image" to="/camera/color/image_raw"/>
+            <remap from="depth/image" to="/camera/aligned_depth_to_color/image_raw"/>
+            <remap from="rgb/camera_info" to="/camera/color/camera_info"/>
             <param name="queue_size" type="int" value="20"/>
             <param name="odom_frame_id" type="string" value="odom"/>
             <!-- RTAB-Map's parameters -->
