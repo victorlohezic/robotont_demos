@@ -15,13 +15,12 @@
   limitations under the License.
 -->
 <launch>
-    <arg name="robotont_ns" default="robotont"/>
     <node name="cartographer_node" pkg="cartographer_ros"
         type="cartographer_node" args="
         -configuration_directory $(find robotont_demos)/config
         -configuration_basename robotont_cartographer_localization_2d.lua"
         output="screen">
-        <remap from="odom" to="$(arg robotont_ns)/odom"/>
+        <remap from="odom" to="odom"/>
         <remap from="echoes" to="scan" />
     </node>
     <node name="cartographer_occupancy_grid_node" pkg="cartographer_ros"

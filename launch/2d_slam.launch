@@ -1,7 +1,6 @@
 <?xml version="1.0" ?>
 
 <launch>
-    <arg name="robotont_ns" default="robotont"/>
     <arg name="base_frame" default="base_footprint"/>
     <arg name="odom_frame" default="odom"/>
     <arg name="map_frame" default="map"/>
@@ -11,8 +10,8 @@
         <param name="scan_height" value="10"/>
         <param name="output_frame_id" value="camera_depth_frame"/>
         <param name="range_min" value="0.45"/>
-        <remap from="image" to="/camera/depth/image_rect_raw"/>
-        <remap from="scan" to="/scan"/>
+        <remap from="image" to="camera/depth/image_rect_raw"/>
+        <remap from="scan" to="scan"/>
     </node>
     <!-- Mapping method-->
     <include file="$(find robotont_demos)/launch/$(arg mapping_method).launch"/>
