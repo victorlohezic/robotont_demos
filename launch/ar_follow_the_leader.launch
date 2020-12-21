@@ -1,14 +1,16 @@
 <?xml version="1.0" ?>
 <launch>
     <arg name="marker_id" default="1" />
-
+    <arg name="__ns" default=""/>
+    <arg name="prefix" default="$(arg __ns)_"/>
     <node name="ar_track_alvar" pkg="ar_track_alvar" type="individualMarkersNoKinect" respawn="false" output="screen">
         <param name="marker_size"           type="double" value="6.8" />
         <param name="max_new_marker_error"  type="double" value="0.08" />
         <param name="max_track_error"       type="double" value="0.2" />
-        <param name="output_frame"          type="string" value="/camera_link" />
-        <remap from="camera_image"  to="/camera/color/image_raw" />
-        <remap from="camera_info"   to="/camera/color/camera_info" />
+        <param if="$(eval prefix == '_')" name="output_frame"          type="string" value="camera_link" />
+        <param unless="$(eval prefix == '_')" name="output_frame"          type="string" value="$(arg prefix)camera_link" />
+        <remap from="camera_image"  to="camera/color/image_raw" />
+        <remap from="camera_info"   to="camera/color/camera_info" />
     </node>
     <node name="robotont_look_at_ar" pkg="robotont_demos" type="ar_follow_the_leader_controller.py" output="screen">
         <param name="marker_id" type="int" value="$(arg marker_id)" />

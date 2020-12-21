@@ -1,21 +1,32 @@
 <?xml version="1.0" ?>
 
 <launch>
-    <arg name="base_frame" default="base_footprint"/>
-    <arg name="odom_frame" default="odom"/>
-    <arg name="map_frame" default="map"/>
+    <arg name="__ns" default=""/>
+    <!-- As eval may not contain double underscore expressions, a new argument is defined to by-pass this issue. -->
+    <arg name="eval_underscore_bypass" value="$(arg __ns)"/>
+    <!-- When a namespace is specified, it is also converted into prefix with a trailing underscore. -->
+    <arg if="$(eval eval_underscore_bypass == '')" name="prefix" default=''/> 
+    <arg unless="$(eval eval_underscore_bypass == '')" name="prefix" default="$(arg __ns)_"/>
+    <arg name="base_frame" default="$(arg prefix)base_footprint"/>
+    <arg name="odom_frame" default="$(arg prefix)odom"/>
+    <arg name="map_frame" default="$(arg prefix)map"/>
     <arg name="mapping_method" default="cartographer"/>
     <param name="odom/child_frame" value="base_footprint"/>
     <node pkg="depthimage_to_laserscan" type="depthimage_to_laserscan" name="depthimage_to_laserscan">
         <param name="scan_height" value="10"/>
-        <param name="output_frame_id" value="camera_depth_frame"/>
+        <param name="output_frame_id" value="$(arg prefix)camera_depth_frame"/>
         <param name="range_min" value="0.45"/>
         <remap from="image" to="camera/depth/image_rect_raw"/>
         <remap from="scan" to="scan"/>
     </node>
     <!-- Mapping method-->
-    <include file="$(find robotont_demos)/launch/$(arg mapping_method).launch"/>
+    <include file="$(find robotont_demos)/launch/$(arg mapping_method).launch">
+        <arg name="prefix" value="$(arg prefix)"/>
+    </include>
 
     <!-- Launch navigation stack -->
-    <include file="$(find robotont_navigation)/launch/navstack.launch"/>
+    <include file="$(find robotont_navigation)/launch/navstack.launch">
+        <arg name="__ns" value="$(arg __ns)"/>
+    </include>
+
 </launch>
