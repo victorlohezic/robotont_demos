@@ -13,14 +13,15 @@
 -- limitations under the License.
 include "map_builder.lua"
 include "trajectory_builder.lua"
-
+-- arg prefix passed from launch file (cartographer.launch)
+prefix=os.getenv("prefix")
 options = {
   map_builder = MAP_BUILDER,
   trajectory_builder = TRAJECTORY_BUILDER,
   map_frame = "map",
-  tracking_frame = "r1_base_footprint",
-  published_frame = "r1_odom",
-  odom_frame = "r1_odom",
+  tracking_frame = prefix .. "base_footprint",
+  published_frame = prefix .. "odom",
+  odom_frame = prefix ..  "odom",
   provide_odom_frame = false,
   publish_frame_projected_to_2d = false,
   use_odometry = true,
