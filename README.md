@@ -106,6 +106,12 @@ sudo apt install ros-melodic-move-base
 roslaunch robotont_demos 2d_slam.launch
 ```
 
+To change the mapping method to gmapping or hector_slam, change the mapping_method argument. For example, to use gmapping:
+
+```bash
+roslaunch robotont_demos 2d_slam.launch mapping_method:=gmapping
+```
+
 **On PC**, launch 2d_slam_display.launch to visualize the result<br/>
 ```bash
 roslaunch robotont_demos 2d_slam_display.launch
