@@ -25,7 +25,7 @@
     </include>
 
     <!-- Launch navigation stack -->
-    <include file="$(find robotont_navigation)/launch/navstack.launch">
+    <include file="$(find robotont_navigation)/launch/move_base.launch">
         <arg name="__ns" value="$(arg __ns)"/>
     </include>
 
