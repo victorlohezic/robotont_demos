@@ -407,7 +407,7 @@ Visualization Manager:
       Size (Pixels): 3
       Size (m): 0.00999999978
       Style: Spheres
-      Topic: /rtabmap/octomap_occupied_space
+      Topic: rtabmap/octomap_occupied_space
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true
@@ -427,12 +427,12 @@ Visualization Manager:
     - Class: rviz/FocusCamera
     - Class: rviz/Measure
     - Class: rviz/SetInitialPose
-      Topic: /initialpose
+      Topic: initialpose
     - Class: rviz/SetGoal
-      Topic: /move_base_simple/goal
+      Topic: move_base_simple/goal
     - Class: rviz/PublishPoint
       Single click: true
-      Topic: /clicked_point
+      Topic: clicked_point
   Value: true
   Views:
     Current:
