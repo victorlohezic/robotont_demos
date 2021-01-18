@@ -74,260 +74,260 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        veiku_base_footprint:
+        base_footprint:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        veiku_base_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        veiku_camera_assembly_link1:
+        base_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_camera_assembly_link2:
+        camera_assembly_link1:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_camera_bottom_screw_frame:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        veiku_camera_link:
+        camera_assembly_link2:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_computer_link:
+        camera_bottom_screw_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        camera_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_rim_back_link:
+        computer_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_rim_left_link:
+        rim_back_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_rim_right_link:
+        rim_left_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_roller_back_0_rim_back_link:
+        rim_right_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_roller_back_0_rim_left_link:
+        roller_back_0_rim_back_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_roller_back_0_rim_right_link:
+        roller_back_0_rim_left_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_roller_back_1_rim_back_link:
+        roller_back_0_rim_right_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_roller_back_1_rim_left_link:
+        roller_back_1_rim_back_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_roller_back_1_rim_right_link:
+        roller_back_1_rim_left_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_roller_back_2_rim_back_link:
+        roller_back_1_rim_right_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_roller_back_2_rim_left_link:
+        roller_back_2_rim_back_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_roller_back_2_rim_right_link:
+        roller_back_2_rim_left_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_roller_back_3_rim_back_link:
+        roller_back_2_rim_right_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_roller_back_3_rim_left_link:
+        roller_back_3_rim_back_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_roller_back_3_rim_right_link:
+        roller_back_3_rim_left_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_roller_back_4_rim_back_link:
+        roller_back_3_rim_right_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_roller_back_4_rim_left_link:
+        roller_back_4_rim_back_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_roller_back_4_rim_right_link:
+        roller_back_4_rim_left_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_roller_back_5_rim_back_link:
+        roller_back_4_rim_right_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_roller_back_5_rim_left_link:
+        roller_back_5_rim_back_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_roller_back_5_rim_right_link:
+        roller_back_5_rim_left_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_roller_back_6_rim_back_link:
+        roller_back_5_rim_right_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_roller_back_6_rim_left_link:
+        roller_back_6_rim_back_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_roller_back_6_rim_right_link:
+        roller_back_6_rim_left_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_roller_front_0_rim_back_link:
+        roller_back_6_rim_right_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_roller_front_0_rim_left_link:
+        roller_front_0_rim_back_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_roller_front_0_rim_right_link:
+        roller_front_0_rim_left_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_roller_front_1_rim_back_link:
+        roller_front_0_rim_right_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_roller_front_1_rim_left_link:
+        roller_front_1_rim_back_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_roller_front_1_rim_right_link:
+        roller_front_1_rim_left_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_roller_front_2_rim_back_link:
+        roller_front_1_rim_right_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_roller_front_2_rim_left_link:
+        roller_front_2_rim_back_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_roller_front_2_rim_right_link:
+        roller_front_2_rim_left_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_roller_front_3_rim_back_link:
+        roller_front_2_rim_right_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_roller_front_3_rim_left_link:
+        roller_front_3_rim_back_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_roller_front_3_rim_right_link:
+        roller_front_3_rim_left_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_roller_front_4_rim_back_link:
+        roller_front_3_rim_right_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_roller_front_4_rim_left_link:
+        roller_front_4_rim_back_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_roller_front_4_rim_right_link:
+        roller_front_4_rim_left_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_roller_front_5_rim_back_link:
+        roller_front_4_rim_right_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_roller_front_5_rim_left_link:
+        roller_front_5_rim_back_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_roller_front_5_rim_right_link:
+        roller_front_5_rim_left_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_roller_front_6_rim_back_link:
+        roller_front_5_rim_right_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_roller_front_6_rim_left_link:
+        roller_front_6_rim_back_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        veiku_roller_front_6_rim_right_link:
+        roller_front_6_rim_left_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        roller_front_6_rim_right_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false

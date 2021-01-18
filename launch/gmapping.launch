@@ -5,6 +5,6 @@
     <node pkg="gmapping" type="slam_gmapping" name="slam_gmapping" output="screen" >
         <param name="base_frame" value="$(arg prefix)base_footprint" />
         <param name="odom_frame" value="$(arg prefix)odom" />
-        <param name="minimumScore" value="100" />7
+        <param name="minimumScore" value="100" />
     </node>
 </launch>
