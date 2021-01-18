@@ -7,9 +7,6 @@
     <!-- When a namespace is specified, it is also converted into prefix with a trailing underscore. -->
     <arg if="$(eval eval_underscore_bypass == '')" name="prefix" default=''/> 
     <arg unless="$(eval eval_underscore_bypass == '')" name="prefix" default="$(arg __ns)_"/>
-    <arg name="base_frame" default="$(arg prefix)base_footprint"/>
-    <arg name="odom_frame" default="$(arg prefix)odom"/>
-    <arg name="map_frame" default="$(arg prefix)map"/>
     <arg name="mapping_method" default="cartographer"/>
     <param name="odom/child_frame" value="base_footprint"/>
     <node pkg="depthimage_to_laserscan" type="depthimage_to_laserscan" name="depthimage_to_laserscan">
