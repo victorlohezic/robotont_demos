@@ -14,7 +14,6 @@
         <param name="output_frame_id" value="$(arg prefix)camera_depth_frame"/>
         <param name="range_min" value="0.45"/>
         <remap from="image" to="camera/depth/image_rect_raw"/>
-        <remap from="scan" to="scan"/>
     </node>
     <!-- Mapping method-->
     <include file="$(find robotont_demos)/launch/$(arg mapping_method).launch">
