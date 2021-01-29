@@ -67,8 +67,8 @@ Visualization Manager:
       Class: rviz/DepthCloud
       Color: 255; 255; 255
       Color Image Topic: /camera/color/image_raw_throttled
-      Color Transformer: RGB8
       Color Transport Hint: compressed
+      Color Transformer: RGB8
       Decay Time: 0
       Depth Map Topic: /camera/aligned_depth_to_color/image_raw_throttled
       Depth Map Transport Hint: compressedDepth
@@ -379,7 +379,7 @@ Visualization Manager:
           Show Trail: false
           Value: true
       Name: RobotModel
-      Robot Description: robotont/robot_description
+      Robot Description: robot_description
       TF Prefix: ""
       Update Interval: 0
       Value: true
@@ -409,7 +409,7 @@ Visualization Manager:
       Size (Pixels): 3
       Size (m): 0.00999999978
       Style: Spheres
-      Topic: /rtabmap/octomap_occupied_space
+      Topic: rtabmap/octomap_occupied_space
       Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true
@@ -429,12 +429,12 @@ Visualization Manager:
     - Class: rviz/FocusCamera
     - Class: rviz/Measure
     - Class: rviz/SetInitialPose
-      Topic: /initialpose
+      Topic: initialpose
     - Class: rviz/SetGoal
-      Topic: /move_base_simple/goal
+      Topic: move_base_simple/goal
     - Class: rviz/PublishPoint
       Single click: true
-      Topic: /clicked_point
+      Topic: clicked_point
   Value: true
   Views:
     Current:

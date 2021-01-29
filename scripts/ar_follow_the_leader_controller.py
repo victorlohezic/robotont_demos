@@ -89,14 +89,14 @@ def ar_demo():
 
 	# Create publisher for command velocity
 	global cmd_vel_pub
-	cmd_vel_pub = rospy.Publisher('/robotont/cmd_vel', Twist, queue_size=1)
+	cmd_vel_pub = rospy.Publisher('cmd_vel', Twist, queue_size=1)
 
 	#Register heartbeat timer
 	t = rospy.Timer(rospy.Duration(0.1), timer_callback)
 
 	# Set up subscriber for /ar_pose_marker
-	rospy.loginfo("Subscribing to /ar_pose_marker")
-	rospy.Subscriber("/ar_pose_marker", AlvarMarkers, callback)
+	rospy.loginfo("Subscribing to ar_pose_marker")
+	rospy.Subscriber("ar_pose_marker", AlvarMarkers, callback)
 
 	rospy.spin()
 
