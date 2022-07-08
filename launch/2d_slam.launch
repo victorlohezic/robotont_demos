@@ -17,8 +17,31 @@
     <param name="output_frame_id" value="$(arg prefix)camera_depth_frame"/>
     <param name="range_min" value="0.45"/>
     <remap from="image" to="camera/depth/image_rect_raw"/>
-  </node>
-  <!-- Mapping method-->
+   <!-- add by victor -->
+    <remap from="camera_info" to="camera/depth/camera_info"/>
+   <!-- end --> 
+ </node>
+
+  <arg name="rviz_fixed_frame" default="$(arg prefix)base_link"/>
+  
+  <include file="$(find robotont_description)/launch/upload_description.launch">
+    <arg name="__ns" value="$(arg __ns)"/>
+  </include>
+
+  <include file="$(find robotont_nuc_description)/launch/upload_description.launch">
+    <arg name="__ns" value="$(arg __ns)"/>
+  </include>
+
+
+<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+
+<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
+
+  <rosparam file="$(find robotont_driver)/config/robotont_params.yaml" subst_value="true" command="load" />
+  <node pkg="robotont_driver" name="$(anon driver_node)" type="driver_node" output="screen" />
+
+
+<!-- Mapping method-->
   <include file="$(find robotont_demos)/launch/$(arg mapping_method).launch">
     <arg name="prefix" value="$(arg prefix)"/>
   </include>
