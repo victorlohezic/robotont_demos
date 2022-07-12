@@ -1,20 +1,4 @@
 <?xml version="1.0" ?>
-
-<!-- Add by Victor urdf found -->
-  <arg name="__ns" default=""/>
-  <arg name="eval_underscore_bypass" value="$(arg __ns)"/>
-  <arg if="$(eval eval_underscore_bypass == '')" name="prefix" default=''/>
-  <arg unless="$(eval eval_underscore_bypass == '')" name="prefix" default="$(arg __ns)/"/>
-
-  <arg name="rviz_fixed_frame" default="$(arg prefix)base_link"/>
-
-  <include file="$(find robotont_nuc_description)/launch/upload_description.launch">
-    <arg name="__ns" value="$(arg __ns)"/>
-  </include>
-
-<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
-<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
-<!-- end add by Victor -->
 <launch>
   <node name="rviz" pkg="rviz" type="rviz" args="-d $(find robotont_demos)/config/robotont_2d_mapping.rviz" output="screen" />
 </launch>
