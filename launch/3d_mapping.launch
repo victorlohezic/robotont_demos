@@ -13,6 +13,12 @@
   <arg name="angular_update" default="0.01"/>
   <arg name="cell_size" default="0.01"/>  
 
+  <!-- Robotont Initialisation -->
+  <include file="$(find robotont_demos)/launch/robotont.launch">
+    <arg name="prefix" value="$(arg prefix)" />
+    <arg name="__ns" value="$(arg __ns)" />
+  </include>
+
   <node ns="rtabmap" name="rtabmap" pkg="rtabmap_ros" type="rtabmap" output="screen" args="--delete_db_on_start">
     <param name="frame_id" type="string" value="$(arg prefix)base_footprint"/>
     <param name="odom_frame_id" type="string" value="$(arg prefix)odom"/>
